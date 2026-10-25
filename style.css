@@ -1,0 +1,221 @@
+:root {
+    --primary: #1a365d;
+    --secondary: #2b6cb0;
+    --dark: #2d3748;
+    --light: #f7fafc;
+    --card-bg: #ffffff;
+    --border: #e2e8f0;
+    --accent: #c53030;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.7;
+    color: var(--dark);
+    background-color: var(--light);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--secondary);
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2.4rem;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    margin: 0.5rem 0 0.2rem 0;
+    font-size: 1.1rem;
+    font-weight: 300;
+    opacity: 0.95;
+}
+
+.location {
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+/* Tab Navigation */
+.nav-tabs {
+    background-color: #0f2342;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #cbd5e0;
+    padding: 0.75rem 1.25rem;
+    margin: 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+    color: white;
+    background: rgba(255,255,255,0.1);
+}
+
+.tab-btn.active {
+    color: white;
+    background-color: var(--secondary);
+}
+
+.tab-btn i {
+    margin-right: 6px;
+}
+
+/* Main Container */
+.container {
+    max-width: 900px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+    min-height: 60vh;
+}
+
+.content-section {
+    display: none;
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.05);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: var(--primary);
+    margin-bottom: 0.3rem;
+}
+
+/* Research & Teaching Cards */
+.research-item, .teaching-card, .agenda-card {
+    background: #fff;
+    border-left: 4px solid var(--secondary);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border);
+    border-left-width: 4px;
+    border-radius: 4px;
+}
+
+.research-item.flagship {
+    border-left-color: var(--primary);
+    background: #f8fafc;
+}
+
+.badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 3px;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+}
+
+.badge.secondary {
+    background: #4a5568;
+}
+
+.meta {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 0.75rem;
+}
+
+.tags {
+    margin-top: 0.75rem;
+}
+
+.tag {
+    display: inline-block;
+    background: var(--border);
+    color: var(--dark);
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    margin-right: 0.3rem;
+}
+
+.citation-box {
+    border-left: 3px solid var(--secondary);
+    padding-left: 1rem;
+    margin: 0.75rem 0;
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Buttons & Contact */
+.btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: var(--primary);
+}
+
+.contact-box {
+    margin-top: 2rem;
+    background: var(--light);
+    padding: 1.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+}
+
+.contact-box p {
+    margin: 0.5rem 0;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #718096;
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+}
