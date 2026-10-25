@@ -285,3 +285,43 @@ p { margin: 0 0 1rem; }
   .research-entry, .contact-grid, .interests-panel { break-inside: avoid; }
   a { color: #111; }
 }
+
+/* Research skills and language proficiency */
+.skills-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1.25rem;
+}
+.skills-panel {
+  padding: clamp(1.35rem, 3vw, 2rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 3px solid #c9c0d8;
+}
+.skills-panel-highlight {
+  background: var(--lavender-soft);
+  border-top-color: var(--lavender);
+}
+.skills-kicker {
+  margin-bottom: 0.55rem;
+  color: var(--pink);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.skills-detail { margin-top: 1rem; color: var(--muted); font-size: 0.88rem; }
+.language-list { margin: 1rem 0 0; }
+.language-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 0;
+  border-bottom: 1px solid var(--line);
+}
+.language-list div:last-child { border-bottom: 0; }
+.language-list dt { font-weight: 650; }
+.language-list dd { margin: 0; color: var(--pink); font-weight: 750; }
+@media (max-width: 720px) {
+  .skills-grid { grid-template-columns: 1fr; }
+}
